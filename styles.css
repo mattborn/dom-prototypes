@@ -34,3 +34,21 @@ td:last-child { padding-right: 0; }
   padding: .5em;
   text-decoration: none;
 }
+
+#signoff {
+  color: #789;
+  padding: 2em;
+  text-align: center;
+}
+#signoff p:first-child {
+  color: #bcd;
+  font-size: 12px;
+}
+#signoff p:nth-child(2) {
+  font-size: 40px;
+  margin: 0;
+}
+#signoff p:last-child {
+  font-weight: bold;
+  margin-top: 0;
+}
