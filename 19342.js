@@ -43,6 +43,10 @@ function timestamp() {
   return Date.now() - Math.floor(Math.random() * 3600)
 }
 
+function runButtons() {
+  return '<button class="primary-button>Run Landers</button> <button class="primary-button>Run Integration</button>'
+}
+
 (() => {
   injectColumns(document.querySelectorAll('.mat-table'), [
     {
@@ -52,6 +56,11 @@ function timestamp() {
     },
     {
       name: 'Last Job Run On',
+      index: -1,
+      data: timestamp,
+    },
+    {
+      name: 'Actions',
       index: -1,
       data: timestamp,
     },
