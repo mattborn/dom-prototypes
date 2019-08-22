@@ -44,7 +44,7 @@ function timestamp() {
 }
 
 function runButtons() {
-  return '<button class="primary-button>Run Landers</button> <button class="primary-button>Run Integration</button>'
+  return '<button class="basic-button primary-button">Run Landers</button> <button class="basic-button primary-button">Run Integration</button>'
 }
 
 (() => {
@@ -62,7 +62,7 @@ function runButtons() {
     {
       name: 'Actions',
       index: -1,
-      data: timestamp,
+      data: runButtons,
     },
   ])
 })()
