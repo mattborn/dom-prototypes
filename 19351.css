@@ -1,0 +1,49 @@
+.theme-light {
+  background-color: #f1f3f5;
+  color: #345;
+}
+
+.navigation-container .chronos { color: #4bb; }
+
+/* brute force specificity reset for non-inline fonts and colors */
+.theme-light .app-header .top-bar div.header-title,
+.theme-light .app-header .top-bar > div > a,
+.theme-light .app-header .top-bar > .crumb.last a,
+.theme-light .app-header .top-bar > div > div > a,
+.theme-light .navigation-container,
+.theme-light .navigation-container a,
+.theme-light .navigation-container h3,
+.theme-light .app-explanation h2,
+.theme-light .app-explanation .large-number,
+.theme-light .app-explanation .explanation,
+.theme-light .btn-secondary,
+.theme-light .view-header a.btn-primary {
+  color: inherit;
+}
+
+.theme-light .app-header .top-bar > div > .metric-availability-notification,
+.theme-light .btn-primary,
+.theme-light .btn-secondary {
+  border-color: inherit;
+}
+
+.theme-light .navigation-container.open,
+.theme-light .view-header,
+.theme-light .standard-story-container,
+.theme-light .standard-story-layout.standard-story-list-layout,
+.theme-light .standard-story-layout.standard-story-list-layout .story-wrapper,
+.theme-light .btn-primary {
+  background: none;
+}
+
+.theme-light .navigation-container .nav-divider {
+  border-color: #bcd;
+}
+
+/* medium shade */
+
+.ao__middle-panel--title,
+.ao__right-panel--title,
+.ao .percentile__bucket-label {
+  color: #789;
+}

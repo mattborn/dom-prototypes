@@ -5,6 +5,11 @@ if (!location.hostname.split('.')[0].startsWith('zeus')) {
 }
 
 (() => {
+  const css = document.createElement('link')
+  css.href='https://raw.githack.com/mattborn/dom-prototypes/master/19343.css?v='+Date.now()
+  css.rel='stylesheet'
+  document.querySelector('head').appendChild(css)
+
   const indicators = ['🤗', '🤔', '😟']
 
   function fakePage() {
