@@ -23,7 +23,7 @@ function isChronos() {
 
 (() => {
   const css = document.createElement('link')
-  css.href='http://localhost:8080/19351.css?v='+Date.now()
+  css.href='https://raw.githack.com/mattborn/dom-prototypes/master/19351.css?v='+Date.now()
   css.rel='stylesheet'
   document.querySelector('head').appendChild(css)
 
