@@ -1,0 +1,15 @@
+.demo-indicator {
+  background: #fff;
+  border-radius: 4px;
+  border-top: 3px solid #f68;
+  bottom: 8px;
+  box-shadow: 0 2px 4px rgba(51,68,85,.2);
+  cursor: no-drop;
+  font: 500 12px/24px -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  opacity: .5;
+  padding: 0 8px;
+  position: fixed;
+  right: 8px;
+  z-index: 1050;
+}
+.demo-indicator:hover { opacity: 1; }
