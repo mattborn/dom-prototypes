@@ -39,13 +39,34 @@ if (location.hostname.split('.')[1] !== 'artemishealth') {
     }
   }
 
+  let benchmarksByType = {
+    custom: [],
+    milliman: [],
+  }
+  fetch('/api/benchmarks/')
+    .then(response => response.json())
+    .then(json => {
+      json.forEach(benchmark => benchmarksByType[benchmark.benchmark_type].push(benchmark))
+    })
+
+  function getBenchmarkCounts() {
+    let counts = []
+    counts.push(benchmarksByType.custom.length || 4)
+    counts.push(benchmarksByType.milliman.length || 20)
+    counts.push(Math.floor(Math.random() * 999))
+    counts.push(counts[0] + counts[1] + counts[2])
+    return counts
+  }
+
   function injectBenchmarks() {
+    const counts = getBenchmarkCounts()
     const benchmarkColor = '#f68'
     const menu = document.querySelector('.lib-metric-chooser-categories .component__group').cloneNode(true)
     document.querySelector('.lib-metric-chooser-categories').insertBefore(menu, document.querySelector('.lib-metric-chooser-categories .component__group'))
     document.querySelector('.lib-metric-chooser-categories .component__group--subject').style.backgroundColor = benchmarkColor
     document.querySelector('.lib-metric-chooser-categories .component__group--subject p').textContent = 'Benchmarks'
     document.querySelector('.lib-metric-chooser-categories .component__group--subject span').style.color = benchmarkColor
+    document.querySelector('.lib-metric-chooser-categories .component__group--subject span').textContent = counts[3]
     const iconMap = ['icon-book', 'icon-milliman', 'icon-home']
     let renameMap = ['Custom', 'Milliman']
     renameMap.push(parentLabel)
@@ -60,6 +81,7 @@ if (location.hostname.split('.')[1] !== 'artemishealth') {
       item.querySelector('p').style.flex = 1
       item.querySelector('p').textContent = renameMap[i]
       item.querySelector('span').style.backgroundColor = benchmarkColor
+      item.querySelector('span').textContent = counts[i]
     })
   }
 })()
